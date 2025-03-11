@@ -1,0 +1,168 @@
+body {
+  font-family: 'Arial', sans-serif;
+  background-color: #f5f5f5;
+  color: #333;
+  margin: 0;
+  padding: 0;
+}
+
+.mid-container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  width: 60%;
+  margin: 0 auto;
+  padding: 3vw;
+  background-color: #ffffff69;
+  /* box-shadow: 0 0 10px rgba(0, 0, 0, 0.24); */
+  border-radius: 8px;
+  margin-top: 50px;
+  margin-bottom: 50px;
+  font-family: 'Courier New', Courier, monospace;
+  line-height: 1.75;
+  font-weight: bold;
+  font-size: clamp(0.75rem, 2vw, 1.25rem);
+}
+
+@media (width <= 1280px) {
+  .mid-container {
+  width: 80%;
+  }
+}
+
+/* .mid-container p {
+  font-size: clamp(1rem, 2vw, 1.5rem);
+  
+} */
+
+@keyframes fade {
+  from {
+    opacity: 0.5;
+  }
+  to {
+    opacity: 1;
+  }
+  0% {
+    opacity: 0.5;
+  }
+}
+
+
+
+.slide-in {
+  opacity: 1;
+  transform: translateY(0);
+}
+
+.mid-title {
+  font-size: clamp(1rem, 3vw, 2rem);
+  text-align: center;
+  color: #000000b4; 
+  border-bottom: 1px solid #000000b4;
+  width: 30%;
+  padding-bottom: 1vw;
+  /* animation: pulse linear both;
+  animation-timeline: view(); */
+}
+
+
+.animated-paragraph {
+  text-align: center;
+  color: #2681cc; 
+  /* font-size: clamp(1rem, 2vw, 1.5rem); */
+  line-height: 2;
+  margin-top: 20px;
+  /* animation: pulse linear both;
+  animation-timeline: view(); */
+}
+
+.mission-section,
+.offerings-section,
+.commitment-section,
+.get-started-section,
+.contact-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  margin-top: 30px;
+  /* font-size: clamp(1rem, 2vw, 1.5rem); */
+  /* animation: pulse linear both;
+  animation-timeline: view(); */
+}
+
+@keyframes pulse {
+  0% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+  25% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  50% {
+    transform: scale(1.1);
+    opacity: 1;
+  }
+  75% {
+    transform: scale(1.05);
+    opacity: 0.9;
+  }
+  100% {
+    transform: scale(1);
+    opacity: 0.8;
+  }
+}
+
+.mission-title,
+.offerings-title,
+.commitment-title,
+.get-started-title {
+  text-align: center;
+  font-size: clamp(1rem, 3vw, 2rem);
+  color: #00000084;
+ 
+}
+
+.offerings-list {
+  list-style: none;
+  padding: 0;
+}
+
+.offerings-item {
+  font-weight: bold;
+  color: #2681cc;
+}
+
+.offerings-description,
+.commitment-paragraph,
+.get-started-paragraph,
+.contact-paragraph {
+  margin-top: 10px;
+}
+
+.get-started-button,
+.contact-link {
+  background-color: #3498db;
+  color: #fff;
+  padding: 10px 20px;
+  text-decoration: none;
+  border-radius: 5px;
+  margin-top: 20px;
+  transition: background-color 0.3s ease;
+  /* font-size: clamp(1rem, 3vw, 1.5rem); */
+}
+
+.get-started-button:hover,
+.contact-link:hover {
+  background-color: #2980b9;
+  
+}
+
+.thank-you {
+  text-align: center;
+  margin-top: 30px;
+  font-style: italic;
+  color: #888;
+}

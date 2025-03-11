@@ -1,0 +1,246 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <!-- Metadata for character set and viewport -->
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>CurBot About</title>
+
+  <!-- Stylesheets to link external CSS files -->
+  <link rel="stylesheet" href="about_styles.css">
+  <link rel="stylesheet" href="header_styles.css">
+  <link rel="stylesheet" href="footer_styles.css">
+
+  <!-- Script for menu functionality, deferred to ensure it doesn't block rendering -->
+  <script defer src="menu_func.js"></script>
+</head>
+
+<body>
+  <!-- Header section containing the site's logo, title, and menu -->
+  <header>
+    <!-- Logo and title section -->
+    <div class="header-title">
+      <div class="header-title-name">
+        <!-- Link to the home page -->
+        <a href="index.html">
+          <!-- Site logo image -->
+          <img class="header-title-img" src="Images/CurBot chatbot.png" alt="C++ Logo">
+        </a>
+        <!-- Site title -->
+        <span class="header-title-text">CurBot</span>
+      </div>
+      
+      <!-- Edition information section -->
+      <div class="header-edition">
+        <!-- External link to the specified URL -->
+        <a href="https://sta.uwi.edu/eng/electrical/about" target="_blank">
+          <!-- Image related to the edition -->
+          <img class="header-edition-image" src="Images/eng.jpg" alt="C++ Logo">
+        </a>
+        <!-- Edition text -->
+        <span class="header-edition-text">ECNG:1009</span>
+      </div>
+    </div>
+
+    <!-- Menu section -->
+    <div class="menu">
+      <!-- Menu rows with buttons and corresponding numeric indicators -->
+      <div class="menu-row1">
+        <span class="menu-nums">1</span>
+        <button class="menu-items" id="menu-button">//Menu</button>
+      </div>
+      <div class="menu-row2">
+        <span class="menu-nums">3</span>
+        <button class="menu-items" id="contact-button">#contactUS</button>
+        <button class="menu-items" id="about-button">&lt;about&gt;</button>
+      </div>
+      <div class="menu-row3">
+        <span class="menu-nums">5</span>
+        <button class="menu-items" id="topics-button">topics</button>
+        <button class="menu-items" id="faq-button">Faq;</button>
+      </div>
+      <div class="menu-row4">
+        <span class="menu-nums">7</span>
+        <button class="menu-items" id="lets-button">let's</button>
+        <button class="menu-items" id="get-started-button" onclick="redirectToStreamlit()">getStarted()</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Overlay menu for small screens -->
+  <div class="overlay" id="menu-overlay">
+    <div class="overlay-content">
+      <!-- Logo image in the overlay -->
+      <img class="overlay-content-img" src="Images/CurBot chatbot.png" alt="C++ Logo">
+      <!-- Navigation links in the overlay -->
+      <a href="index.html">Home</a>
+      <a href="about.html">About</a>
+      <a href="contact.html">Contact</a>
+      <a href="topics.html">Topics</a>
+      <a href="FAQ.html">FAQ</a>
+      <a href="https://curbotchat.vercel.app/">Get Started</a>
+      <a href="#" id="close-menu">Close</a>
+    </div>
+  </div>
+
+  <!-- Main content container -->
+  <div class="mid-container">
+    <!-- Animated title -->
+    <h2 class="mid-title">
+      <span class="animated-text">About Us</span>
+    </h2>
+
+    <!-- Animated paragraph introducing CurBot -->
+    <p class="animated-paragraph">
+      Welcome to our ECNG 1009 Edition, CurBot! Short for Curriculum Bot.
+      <br> We're excited to introduce you to a virtual assistant designed to enhance your
+      experience in the world of electrical and computer engineering.
+    </p>
+
+    <!-- Mission section with title and paragraph -->
+    <div class="mission-section">
+      <h3 class="mission-title">Our Mission</h3>
+      <p class="mission-paragraph">
+        CurBot's mission is to provide you with a dynamic and interactive resource tailored to the
+        ECNG 1009 course. We're here to assist you with a wide range of topics, from fundamental concepts
+        to intermediate problem-solving for C++ Programming.
+      </p>
+    </div>
+
+    <!-- Offerings section with title and a list of offerings -->
+    <div class="offerings-section">
+      <h3 class="offerings-title">What We Offer</h3>
+      <ul class="offerings-list">
+        <!-- Each offering item with a title and description -->
+        <li>
+          <span class="offerings-item">Comprehensive Knowledge</span>
+          <p class="offerings-description">Our chatbot is built on the foundation of C++, a programming
+            language that plays a crucial role in your ECNG 1009 journey. We provide explanations, code
+            samples, and problem-solving techniques to help you grasp the core concepts effectively.</p>
+        </li>
+        <li>
+          <span class="offerings-item">24/7 Availability</span>
+          <p class="offerings-description">Whether you're a morning person or a night owl, our chatbot
+            is always ready to help. Access assistance when you need it, at your own convenience.</p>
+        </li>
+        <li>
+          <span class="offerings-item">Interactive Learning</span>
+          <p class="offerings-description">We believe that engagement leads to better understanding.
+            Our chatbot offers quizzes, challenges, and interactive lessons to reinforce your knowledge
+            and ensure a deeper comprehension of ECNG 1009 topics.</p>
+        </li>
+      </ul>
+    </div>
+
+    <!-- Commitment section with title and paragraph -->
+    <div class="commitment-section">
+      <h3 class="commitment-title">Our Commitment</h3>
+      <p class="commitment-paragraph">
+        We are dedicated to facilitating your journey through ECNG 1009. Our chatbot is continuously updated
+        with the latest resources, ensuring that you have access to the most up-to-date information. If you
+        have questions, need guidance, or simply want to discuss the exciting world of electrical and computer
+        engineering, our chatbot is here for you.
+      </p>
+    </div>
+
+    <!-- Get Started section with title, paragraph, and a button -->
+    <div class="get-started-section">
+      <h3 class="get-started-title">Get Started</h3>
+      <p class="get-started-paragraph">
+        Ready to explore the world of ECNG 1009 with our C++ chatbot? Dive into the topics, engage in
+        conversations, and empower your learning. Together, we'll unravel the complexities of electrical and
+        computer engineering.
+      </p>
+      <!-- Button linking to the Get Started page -->
+      <a href="https://curbotchat.vercel.app/" class="get-started-button">Start Now</a>
+    </div>
+
+    <!-- Contact section with a paragraph and a link to the contact page -->
+    <div class="contact-section">
+      <p class="contact-paragraph">
+        If you have any questions, feedback, or suggestions, please don't hesitate to contact us. We're here
+        to make your ECNG 1009 experience a rewarding and enriching one.
+      </p>
+      <a href="contact.html" class="contact-link">Get in Touch</a>
+    </div>
+
+    <!-- Thank you message -->
+    <p class="thank-you">
+      Thank you for choosing ECNG 1009 Chatbot as your partner in education!
+    </p>
+  </div>
+
+  <!-- Footer section with various content -->
+  <footer class="footer-container">
+    <div class="footer-content">
+      <!-- Quick menu links and their respective URLs -->
+      <div class="quick-menu-links">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+          <li><a href="https://curbotchat.vercel.app/">GET STARTED</a></li>
+        </ul>
+      </div>
+      <!-- Copyright information with the university's name and the year -->
+      <div class="copyright">
+        <img class="bot-img-1" src="Images/CurBot chatbot.png" alt="C++ Logo">
+        <p>The University of the West Indies. <br>&copy; 2023 Designed with <span class="heart">&hearts;</span> by Group 8</p>
+      </div>
+      <!-- Legal links to privacy policy and terms & conditions -->
+      <div class="legal">
+        <p><a href="privacy_policy.html">Privacy Policy</a></p>
+        <p><a href="terms_conditions.html">Terms & Conditions</a></p>
+      </div>
+    </div>
+  </footer>
+
+  <!-- JavaScript script for handling scroll animations -->
+  <script>
+    // Function to redirect to the specified URL
+    function redirectToStreamlit() {
+      window.location.href = "https://curbotchat.vercel.app/";
+    }
+
+    // Event listener for handling scroll animations
+    document.addEventListener('DOMContentLoaded', function () {
+      const titles = document.querySelectorAll('.mission-title, .offerings-title, .commitment-title, .get-started-title');
+      const paragraphs = document.querySelectorAll('.mid-container p');
+
+      // Function to handle scroll and trigger animations
+      function handleScroll() {
+        const triggerOffset = window.innerHeight * 0.8; // Adjust as needed
+
+        // Check each title element
+        titles.forEach(title => {
+          const titleOffset = title.getBoundingClientRect().top;
+          const isTitleInView = titleOffset < triggerOffset;
+
+          // Add 'fade-in' class if title is in view and not already faded in
+          if (isTitleInView && !title.classList.contains('fade-in')) {
+            title.classList.add('fade-in');
+          }
+        });
+
+        // Check each paragraph element
+        paragraphs.forEach(paragraph => {
+          const paragraphOffset = paragraph.getBoundingClientRect().top;
+          const isParagraphInView = paragraphOffset < triggerOffset;
+
+          // Add 'fade-in' class if paragraph is in view and not already faded in
+          if (isParagraphInView && !paragraph.classList.contains('fade-in')) {
+            paragraph.classList.add('fade-in');
+          }
+        });
+      }
+
+      // Attach scroll event listener
+      window.addEventListener('scroll', handleScroll);
+
+      // Trigger initial check on page load
+      handleScroll();
+    });
+  </script>
+</body>
+
+</html>

@@ -1,0 +1,62 @@
+body {    
+  background-color: rgba(214, 214, 214, 0.95);
+}  
+
+  
+.top-mid-container {
+  display: flex;
+  font-family:'Courier New', Courier, monospace;
+  background-color: #f4f4f4dc;
+  width: 80%;
+  margin: auto;
+  font-size: clamp(0.8rem, 4vw, 1.2rem);
+  line-height: 2;
+  padding: 20px;
+  border-radius: 10px;
+  margin-top: 30px;
+  margin-bottom:  5vw;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.16);
+  font-weight: bold;
+}
+
+.top-mid-title {
+  font-size: clamp(2rem, 4vw, 5rem);
+  margin-top: 1.5vw;
+  margin-right: -0.5vw;
+  margin-left: -0.5vw;
+  color: #000000ae;
+  writing-mode: vertical-rl; /* vertical right-to-left writing mode */
+  text-orientation: upright; /* ensures upright text */
+}
+
+.top-mid-paragraph {
+  color: #333;
+  font-size: clamp(1rem, 4vw, 1.5rem);
+}
+
+.top-mid-paragraph a {
+  color: #0077cc;
+  text-decoration: none;
+  font-weight: bold;
+}
+
+.top-mid-paragraph a:hover {
+  text-decoration: underline;
+}
+
+
+@media (width <= 1280px) {
+  .top-mid-container {
+  
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .top-mid-title {
+    writing-mode:horizontal-tb; /* vertical right-to-left writing mode */
+    text-orientation:sideways; /* ensures upright text */
+  }
+}
+
+
+

@@ -1,0 +1,194 @@
+body {
+	background-color: #2E3537;	
+}
+
+:root {
+	--cards: 8;
+	--cardHeight: auto;
+	--cardTopPadding: 5vh;
+	--cardMargin: 0;
+}
+
+
+.container {
+	width: 80%;
+	margin: 0 auto;
+  /* margin-bottom: 5vh;  */
+  /* border: 1px solid; */
+  padding-top: 0;
+  font-family: Arial, sans-serif;
+  line-height: 1.5;
+  /* border:1px solid black; */
+}
+
+
+
+
+#cards {
+	list-style: none;
+	padding-left: 0;
+	display: grid;
+	grid-template-columns: 1fr;
+	grid-template-rows: repeat(var(--cards), var(--cardHeight));
+	gap: var(--cardMargin);
+	padding-bottom: calc(var(--cards) * var(--cardTopPadding));
+	margin-bottom: var(--cardMargin);
+  border:1px solid rgb(150, 31, 31);
+}
+
+#card1 {
+	--index: 1;
+}
+#card2 {
+	--index: 2;
+}
+#card3 {
+	--index: 3;
+}
+#card4 {
+	--index: 4;
+}
+#card5 {
+	--index: 5;
+}
+#card6 {
+	--index: 6;
+}
+#card7 {
+	--index: 7;
+}
+#card8 {
+	--index: 8;
+  opacity: 0;
+  pointer-events: none;
+}
+
+.card {
+	position: sticky;
+	top: 0;
+	padding-top: calc(var(--index) * var(--cardTopPadding));
+  font-size: clamp(1rem, 2vw, 2rem);
+}
+
+.card span{
+  font-size: clamp(0.75rem, 2vw, 1.7rem);
+  padding: 1vw;
+  padding-left: 4vw;
+  line-height: 1.5;
+}
+
+#card1 .card-body {
+	background-color: #52B2CF;
+  background: linear-gradient(to left, #52B2CF, #bebdbd);
+}
+#card2 .card-body {
+	background-color: #E5A36F;
+  background: linear-gradient(to left, #E5A36F, #dadada);
+}
+#card3 .card-body {
+	background-color: #9CADCE;
+  background: linear-gradient(to left, #9CADCE, #dadada);
+}
+#card4 .card-body {
+	background-color: #D4AFB9;
+  background: linear-gradient(to left, #D4AFB9, #dadada);
+}
+
+#card5 .card-body {
+	background-color: rgb(175, 212, 177);
+  background: linear-gradient(to left, rgb(175, 212, 177), #dadada);
+}
+
+
+#card6 .card-body {
+	background-color: #d4c4af;
+  background: linear-gradient(to left, #d4c4af, #dadada);
+  background: linear-gradient(to left, rgb(168, 123, 190), #dadada);
+}
+
+
+#card7 .card-body {
+	background-color: #a0a1a3;
+  background: linear-gradient(to left, rgb(168, 123, 190), #dadada);
+  background: linear-gradient(to left, #d4c4af, #dadada);
+}
+
+
+.card-body {
+	box-sizing: border-box;
+	padding: 1vw;
+	/* border-radius: clamp(1rem, 2.5vw, 1.25rem); */
+	box-shadow: 0 0 30px 0 rgba(0,0,0,0.3);
+	height: var(--cardHeight);
+	display: flex;
+	justify-content: center;
+	align-items: center;
+	transition: all 0.5s;
+  background-color: white;
+  width: 100%;
+  /* border:1px solid black; */
+}
+
+h2 {
+	font-size: clamp(0.75rem, 2vw, 2rem);
+  padding:2vw;
+  /* border: 2px solid black; */
+  border-right: 1.5px solid black;
+  /* border-radius: 20px; */
+  font-weight: bold;
+  margin-left: 3vw;
+  text-align: center;
+  max-height: 40vh;
+  min-width: 20vw;
+  font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+}
+
+li {
+  list-style: none;
+}
+
+/* Google Fonts */
+@import url(https://fonts.googleapis.com/css?family=Anonymous+Pro);
+
+
+.title{
+  font-size: clamp(1rem, 4vw, 4rem);
+  font-weight: 700;
+  font-family: 'Anonymous Pro', monospace; 
+    top: 50%;  
+    width: 24em;
+    margin: 0 auto;
+    margin-top: 4vw;
+    border-right: 2px solid rgba(255,255,255,.75);
+    /* font-size: 180%; */
+    text-align: center;
+    white-space: nowrap;
+    overflow: hidden;
+    transform: translateY(-50%);    
+}
+
+/* Animation */
+.anim-typewriter{
+  animation: typewriter 2s steps(44) 1s 1 normal both,
+             blinkTextCursor 500ms steps(44) infinite normal;
+}
+
+@keyframes typewriter{
+  from{width: 0;}
+  to{width: 16em;}
+}
+@keyframes blinkTextCursor{
+  from{border-right-color: rgba(255,255,255,.75);}
+  to{border-right-color: transparent;}
+}
+
+@media (width <= 900px) {
+  .container {
+    width: 100%;
+  }
+
+
+}
+
+
+

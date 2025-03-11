@@ -1,0 +1,64 @@
+body {    
+  background-color: rgb(255, 255, 255);
+}  
+
+  
+.top-mid-container {
+  text-align: left;
+  max-width: 800px;
+  margin: auto;
+  padding: 20px;
+  background-color: transparent;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+  border-radius: 8px;
+  border: 1px solid black;
+
+}
+
+.top-mid-title {
+  margin: 0;
+  color: #333;
+  text-align: center;
+  margin: 3vw;
+  margin-top: 5vw;
+}
+
+.top-mid-paragraph {
+  font-size: 1em;
+  color: #030303;
+  line-height: 1.5;
+  
+}
+
+input[type="checkbox"] {
+  margin-bottom: 10px;
+}
+
+button {
+  padding: 10px 20px;
+  background-color: #007BFF;
+  color: #fff;
+  border: none;
+  border-radius: 5px;
+  cursor: pointer;
+}
+
+button:hover {
+  background-color: #0056b3;
+}
+
+
+  @media only screen and (max-width: 767px) {
+    .top-mid-title {
+      font-size: 5vw;
+    }
+    .top-mid-paragraph {
+      
+        font-size: 3.5vw;
+        
+    }
+
+  }
+
+
+  

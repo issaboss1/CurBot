@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, user-scalable=no">
+    <title>CurBot Home</title>
+    <link rel="stylesheet" href="index_style.css">
+    <link rel="stylesheet" href="header_styles.css">
+    <link rel="stylesheet" href="footer_styles.css">  
+    <script defer src="menu_func.js"></script>
+    <script src="webcomponents-loader.js"></script> 
+    <script type="module" src="model-viewer.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+    <script nomodule 
+        src="https://unpkg.com/@google/model-viewer/dist/model-viewer-legacy.js">
+    </script>
+
+<body>
+    <header>
+        <div class="header-title">
+            <div class="header-title-name">
+                <a href="index.html">
+                  <img class="header-title-img" src="Images/CurBot chatbot.png" alt="C++ Logo">
+                </a>
+                <span class="header-title-text">CurBot</span>
+            </div>
+            <div class="header-edition">
+                <a href="https://sta.uwi.edu/eng/electrical/about" target="_blank">
+                  <img class="header-edition-image" src="Images/eng.jpg" alt="C++ Logo">
+                </a>
+                <span class="header-edition-text">ECNG:1009</span>
+            </div>        
+        </div>
+
+        <div class="menu">
+            <div class="menu-row1">
+                <span class="menu-nums">1</span>
+                <button class="menu-items" id="menu-button">//Menu</button>
+            </div>
+            <div class="menu-row2">
+                <span class="menu-nums">3</span>
+                <button class="menu-items" id="contact-button">#contactUS</button>
+                <button class="menu-items" id="about-button">&lt;about&gt;</button>
+            </div>
+            <div class="menu-row3">
+                <span class="menu-nums">5</span>
+                <button class="menu-items" id="topics-button">topics</button>
+                <button class="menu-items" id="faq-button">Faq;</button>
+            </div>
+            <div class="menu-row4">
+                <span class="menu-nums">7</span>
+                <button class="menu-items" id="lets-button">let's</button>
+                <button class="menu-items" id="get-started-button">getStarted()</button>
+            </div>          
+        </div>
+    </header>
+
+    <div class="overlay" id="menu-overlay">
+        <div class="overlay-content">
+            <img class="overlay-content-img" src="Images/CurBot chatbot.png" alt="C++ Logo">    
+          <a href="index.html">Home</a>
+          <a href="about.html">About</a>
+          <a href="contact.html">Contact</a>
+          <a href="topics.html">Topics</a>
+          <a href="FAQ.html">FAQ</a>
+          <a href="https://curbotchat.vercel.app/">Get_Started</a>
+          <a href="#" id="close-menu">Close</a>
+        </div>
+      </div>
+
+    <div class="top-container">
+        <span class="top-title"> Welcome to CurBot! </span>
+        
+        <div class="top-text">
+            <img class="top-img" src="Images/c++.jpeg" alt="C++ Logo">
+           <!-- <model-viewer class="podium" id="podium" src="Models/pedit4/podiumnew8.glb" 
+  alt="A 3D model of a podium" shadow-intensity="0" animation-name="1" 
+ rotation-per-second="30deg" auto-rotate-delay="30" loading="lazy" >
+</model-viewer> -->
+            <span class="top-paragraph">CurBot is a web-based chatbot tailored to students.
+                This edition focuses on the Introduction to C++ Programming course. The primary purpose is to supplement
+                the course material by providing interactive content and responsive assistance focused on the
+                curriculum of ECNG1009.
+            </span>
+        </div>
+        <!-- <button class="main-get-started-button" onclick="redirectToStreamlit()">GET STARTED</button> -->
+    </div>
+   
+    <div class="bot-container">
+        <div class="chatbot-container" id="chatbot-container" onclick="changeImage()">
+            <span class="bot-title">CurBot</span>
+            <img class="bot-curbot-img" src="Images/CurBot chatbot.png" alt="CurBot">
+            <span class="bot-curbot-paragraph">The Curriculum Bot</span>
+        </div>
+    
+        <div class="resource-container" id="resource-container">
+            <span class="bot-title">Resources</span>
+            <img class="bot-resource-img" src="Images/resource.gif" alt="Resources">
+            <span class="bot-resource-paragraph">Further Learning!</span>
+        </div>
+    </div>
+
+    <footer class="footer-container">
+        
+        <div class="footer-content"> 
+            <div class="quick-menu-links">
+                <ul>
+                    <li><a href="index.html">HOME</a></li>
+                    <li><a href="contact.html">CONTACT US</a></li>
+                    <li><a href="https://curbotchat.vercel.app/">GET STARTED</a></li>
+                  </ul>
+              </div>
+            <div class="copyright">
+                <img class="bot-img-1" src="Images/CurBot chatbot.png" alt="C++ Logo">
+                <p>The University of the West Indies. <br>&copy; 2023 Designed with <span class="heart">&hearts;</span> by Group 8</p>
+              </div>
+          <div class="legal">
+            <p><a href="privacy_policy.html">Privacy Policy</a></p>
+            <p><a href="terms_conditions.html">Terms & Conditions</a></p>
+          </div>          
+        </div>
+      
+        
+      </footer>
+      
+
+      <script>
+document.addEventListener('DOMContentLoaded', function () {
+  const topContainer = document.querySelector('.top-container');
+  const chatContainer = document.querySelector('.chatbot-container');
+  const resourceContainer = document.querySelector('.resource-container');
+  const elements = [topContainer];
+  const containers = [chatContainer, resourceContainer];
+
+  function handleScroll() {
+    const triggerOffset = window.innerHeight * 0.8; // Adjust as needed
+
+    elements.forEach(element => {
+      const elementOffset = element.getBoundingClientRect().top;
+      const isInView = elementOffset < triggerOffset;
+
+      if (isInView) {
+        element.classList.add('slide-in');
+        element.classList.remove('slide-out');
+      } else {
+        element.classList.remove('slide-in');
+        element.classList.add('slide-out');
+      }
+    });
+
+    // Check screen height and apply animation logic accordingly
+    if (window.innerHeight < 1000) {
+      containers.forEach(container => {
+        const containerOffset = container.getBoundingClientRect().top;
+        const isInView = containerOffset < triggerOffset;
+
+        if (isInView) {
+          container.classList.add('slide-in');
+          container.classList.remove('slide-out');
+        } else {
+          container.classList.remove('slide-in');
+          container.classList.add('slide-out');
+        }
+      });
+    }
+  }
+
+  // Attach scroll event listener
+  window.addEventListener('scroll', handleScroll);
+});
+
+function changeImage() {
+    var imgElement = document.querySelector('.bot-curbot-img');
+    imgElement.src = 'Images/loading.gif'; // Replace with the path to the new image
+    imgElement.alt = 'New Alt Text'; // Replace with the new alt text
+
+    // Set a timeout to refresh the page after 5 seconds
+    setTimeout(function () {
+        location.reload(); // This will reload the page
+    }, 15000);
+}
+
+
+
+    </script>
+
+</body>
+
+</html>

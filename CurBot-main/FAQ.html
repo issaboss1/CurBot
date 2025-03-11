@@ -1,0 +1,169 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>CurBot FAQ</title>
+<link rel="stylesheet" href="FAQ_style.css">
+<link rel="stylesheet" href="header_styles.css">
+<link rel="stylesheet" href="footer_styles.css">
+<script defer src="menu_func.js"></script>
+</head>
+
+<body>
+  <header>
+    <div class="header-title">
+        <div class="header-title-name">
+            <a href="index.html">
+              <img class="header-title-img" src="Images/CurBot chatbot.png" alt="C++ Logo">
+            </a>
+            <span class="header-title-text">CurBot</span>
+        </div>
+        <div class="header-edition">
+            <a href="https://sta.uwi.edu/eng/electrical/about" target="_blank">
+              <img class="header-edition-image" src="Images/eng.jpg" alt="C++ Logo">
+            </a>
+            <span class="header-edition-text">ECNG:1009</span>
+        </div>        
+    </div>
+
+    <div class="menu">
+        <div class="menu-row1">
+            <span class="menu-nums">1</span>
+            <button class="menu-items" id="menu-button">//Menu</button>
+        </div>
+        <div class="menu-row2">
+            <span class="menu-nums">3</span>
+            <button class="menu-items" id="contact-button">#contactUS</button>
+            <button class="menu-items" id="about-button">&lt;about&gt;</button>
+        </div>
+        <div class="menu-row3">
+            <span class="menu-nums">5</span>
+            <button class="menu-items" id="topics-button">topics</button>
+            <button class="menu-items" id="faq-button">Faq;</button>
+        </div>
+        <div class="menu-row4">
+            <span class="menu-nums">7</span>
+            <button class="menu-items" id="lets-button">let's</button>
+            <button class="menu-items" id="get-started-button" onclick="redirectToStreamlit()">getStarted()</button>
+        </div>          
+    </div>
+</header> 
+
+<div class="overlay" id="menu-overlay">
+  <div class="overlay-content">
+      <img class="overlay-content-img" src="Images/CurBot chatbot.png" alt="C++ Logo">    
+    <a href="index.html">Home</a>
+    <a href="about.html">About</a>
+    <a href="contact.html">Contact</a>
+    <a href="topics.html">Topics</a>
+    <a href="FAQ.html">FAQ</a>
+    <a href="https://curbotchat.vercel.app/">Get Started</a>
+    <a href="#" id="close-menu">Close</a>
+  </div>
+</div>
+
+<div class="container"> <p class="title anim-typewriter">Frequently Asked Questions</p>
+      <li class="card" id="card1">
+          <div class="card-body">
+              <h2>What topics does the C++ chatbot cover?</h2>
+              <span>Our chatbot covers the fundamental syntax and structure of the C++ programming language. You can learn more <a href="topics.html">here</a>.</span>
+          </div>
+      </li>
+      <li class="card" id="card2">
+          <div class="card-body">
+              <h2>Can the chatbot help with coding problems and errors?</h2>
+              <span> Yes, the chatbot is meant to be a resource for learning and answering questions related to C++. It does provide code corrections or suggestions.</span>
+          </div>
+      </li>
+      <li class="card" id="card3">
+          <div class="card-body">
+              <h2>How does the chatbot keep its content up to date with the latest C++ standards?</h2>
+              <span>Curbot's content is regularly updated to align with the latest C++ standards and best practices. It leverages a combination of stored information in a vector database and real-time access to OpenAI's GPT-3 API, ensuring that you receive accurate and current information regarding C++ programming.</span>
+          </div>
+      </li>
+      <li class="card" id="card4">
+          <div class="card-body">
+              <h2>Can I interact with the chatbot through voice or text commands?</h2>
+              <span>As of now, Curbot primarily supports text-based interactions. You can type your questions or commands, and Curbot will provide text-based responses. Voice commands are not supported at this time.</span>
+          </div>
+      </li>
+      <li class="card" id="card5">
+          <div class="card-body">
+              <h2>Is there a way to continue previous sessions with the chatbot?</h2>
+              <span>Yes, you can continue your conversation within the same session. However, please note that it stores files locally, the chat history can be imported and exported to other devices.</span>
+          </div>
+      </li>
+      <li class="card" id="card6">
+          <div class="card-body">
+              <h2>Is there a time limit for using the chatbot?</h2>
+              <span>There is no specific time limit for using Curbot, and you can interact with it as long as you need to. Additionally, there is no maximum number of interactions or questions. Curbot is available to assist you with your C++ learning journey whenever you have questions or require guidance.</span>
+          </div>
+      </li>
+      <li class="card" id="card7">
+          <div class="card-body">
+              <h2>What should I do if I encounter technical issues while using the chatbot?</h2>
+              <span> If you encounter any technical issues while using the chatbot, please <a href="contact.html">Contact Us</a>. We are here to assist you with any technical problems or difficulties you may face while using Curbot. Your feedback and inquiries are important to us, and we will do our best to address and resolve any issues promptly.</span>
+          </div>
+      </li>
+      <li class="card" id="card8">
+        <div class="card-body">
+            <h2>placeholder</h2>
+            <span> space</span>
+        </div>
+    </li>
+  </ul>
+</div>
+
+
+<div class="top-mid-container">
+  
+  
+    
+  
+</div> 
+
+
+
+<footer class="footer-container">
+        
+  <div class="footer-content"> 
+      <div class="quick-menu-links">
+        <ul>
+          <li><a href="index.html">HOME</a></li>
+          <li><a href="contact.html">CONTACT US</a></li>
+          <li><a href="https://curbotchat.vercel.app/">GET STARTED</a></li>
+        </ul>
+        </div>
+      <div class="copyright">
+          <img class="bot-img-1" src="Images/CurBot chatbot.png" alt="C++ Logo">
+          <p>The University of the West Indies. <br>&copy; 2023 Designed with <span class="heart">&hearts;</span> by Group 8</p>
+        </div>
+    <div class="legal">
+      <p><a href="privacy_policy.html">Privacy Policy</a></p>
+      <p><a href="terms_conditions.html">Terms & Conditions</a></p>
+    </div>          
+  </div>
+
+  
+</footer>
+
+
+<script>
+  function toggleAnswer(element) {      
+      var answer = element.querySelector('.answer');
+      var arrow = element.querySelector('.arrow'); 
+      
+      answer.classList.toggle('show-answer');
+         
+      arrow.classList.toggle('arrow-up');
+  }
+</script>
+
+</body> 
+
+
+
+
+</html>
